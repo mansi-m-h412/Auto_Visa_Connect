@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>All Applications</title></head>
+<body>
+    <h1>All Applications</h1>
+    <table border="1">
+        <tr>
+            <th>Application ID</th>
+            <th>Name</th>
+            <th>Passport ID</th>
+            <th>Phone Number</th>
+            <th>Purpose</th>
+            <th>Status</th>
+            <th>Progress</th>
+        </tr>
+        {% for app in data %}
+            <tr>
+                {% for value in app.values() %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <br><a href="/">Home</a>
+</body>
+</html>

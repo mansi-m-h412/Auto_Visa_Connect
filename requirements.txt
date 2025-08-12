@@ -1,0 +1,6 @@
+Flask
+gunicorn
+pymongo
+pandas
+joblib
+PyPDF2

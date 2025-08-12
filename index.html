@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Autovisa Connect</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <style>
+    body {
+      background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Soothing blue-purple gradient */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .main-container {
+      animation: fadeIn 1s ease-in-out;
+      background-color: #ffffffee;
+      max-width: 600px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    .btn-lg {
+      min-width: 220px;
+      margin: 10px 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #007bff !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Autovisa Connect</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container main-container text-center mt-5 pt-5">
+    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo" width="80" class="mb-3"/>
+    <h1 class="text-primary fw-bold">Autovisa Connect</h1>
+    <p class="lead">Easily apply, track, and manage your visa applications</p>
+    <div class="mt-4 d-grid gap-2">
+      <a href="{{ url_for('register') }}" class="btn btn-success btn-lg">Apply for Visa</a>
+      <a href="{{ url_for('view') }}" class="btn btn-primary btn-lg">View Application</a>
+      <a href="{{ url_for('update') }}" class="btn btn-warning btn-lg">Update Application</a>
+      <a href="{{ url_for('delete') }}" class="btn btn-danger btn-lg">Delete Application</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

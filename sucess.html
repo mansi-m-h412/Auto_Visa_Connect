@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-lg">
+            <div class="card-body text-center">
+                <h2 class="text-success">Application Submitted Successfully!</h2>
+                <p class="lead">Thank you, <b>{{ name }}</b>. Your application has been received.</p>
+                <p><strong>Application ID:</strong> <span class="text-primary">{{ application_id }}</span></p>
+                <p><strong>Status:</strong> <span class="text-warning">{{ status }}</span></p>
+                <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Go to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
